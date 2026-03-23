@@ -183,8 +183,8 @@
         const ctx = canvas.getContext('2d', { alpha: false });
 
         let balls = [];
-        let gravity = 1.0;
-        let friction = 0.92;
+        let gravity = 0.9;
+        let friction = 0.7;
         let groundFriction = 0.88; // Extra friction when on ground to stop sliding
         let gravityEnabled = true;
         let draggedBall = null;
