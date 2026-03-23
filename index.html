@@ -136,7 +136,7 @@
 <body>
     <div class="wrapper">
         <h1 style="margin-bottom: 10px;">⚡ Bouncing Ball</h1>
-        <div style="color: rgba(200, 200, 255, 0.6); font-size: 0.9rem; margin-bottom: 10px;">Balls: <span id="ballCount">0</span>/100000</div>
+        <div style="color: rgba(200, 200, 255, 0.6); font-size: 0.9rem; margin-bottom: 10px;">Balls: <span id="ballCount">0</span>/10000</div>
         <canvas id="canvas"></canvas>
         <div class="controls">
             <div style="display: flex; align-items: center; gap: 10px;">
@@ -159,7 +159,7 @@
                     id="ballCountSlider" 
                     type="range" 
                     min="1" 
-                    max="100000" 
+                    max="10000" 
                     step="1" 
                     value="1"
                     style="width: 150px; cursor: pointer;"
@@ -725,8 +725,8 @@
 
         function addBall(x, y) {
             // Limit maximum objects to avoid browser crash
-            if (balls.length >= 100000) {
-                alert('Maximum 100000 objects reached!');
+            if (balls.length >= 10000) {
+                alert('Maximum 10000 objects reached!');
                 return;
             }
             if (x === undefined || y === undefined) {
@@ -750,8 +750,8 @@
 
         function addMultipleObjects(count) {
             for (var i = 0; i < count; i++) {
-                if (balls.length >= 500) {
-                    alert('Maximum 500 objects reached!');
+                if (balls.length >= 10000) {
+                    alert('Maximum 10000 objects reached!');
                     break;
                 }
                 addBall();
